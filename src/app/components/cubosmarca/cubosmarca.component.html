@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <h1 class="text-primary">Cubos por marca</h1>
+    <table *ngIf="marca" class="table table-bordered table-dark">
+        <thead>
+            <tr>
+                
+                <th>Nombre</th>
+                <th>Imagen</th>
+                <th>Precio</th>
+               
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cubo of cubos">
+                <td>{{cubo.nombre}}</td>
+                <td class="text-center">
+                    <img src="{{cubo.imagen}}" width="100" class="img-thumbnail"/>
+                </td>
+                <td>{{cubo.precio}}€</td>
+             
+                <td>
+                    <button class="btn btn-danger" >detalles</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
