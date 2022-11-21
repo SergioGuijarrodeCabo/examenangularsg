@@ -1,0 +1,30 @@
+<div>
+
+
+ 
+    <form #formLogin="ngForm" (ngSubmit)="registro()">
+        <label>Nombre usuario:</label>
+        <input type="text" 
+        #cajanombre name="cajanombre" 
+        class="form-control"/>
+        <label>Email:</label>
+        <input type="text" 
+        #cajaemail name="cajaemail" 
+        class="form-control"/>
+        <label>Contraseña:</label>
+        <input type="text" 
+        #cajapassword name="cajapassword" 
+        class="form-control"/>
+        <label>Repetir contraseña:</label>
+        <input type="text" 
+        #cajarepetirpassword name="cajarepetirpassword" 
+        class="form-control"/>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+
+
+ 
+
+
+   
+</div>

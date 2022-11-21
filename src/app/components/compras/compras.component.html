@@ -1,0 +1,25 @@
+<div>
+
+    <p>Compras</p>
+     <a [routerLink]="['/realizarcompra']" class="btn btn-primary">NUEVA COMPRA</a>
+    <table  *ngIf="compras" class="table table-bordered table-dark">
+        <thead>
+            <tr>
+                <th>ID Cubo</th>
+                <th>ID pedido</th>
+                <th>ID usuario</th>
+                <th>Fecha pedido</th>
+          
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let compra of compras">
+                <td>{{compra.idCubo}}</td>
+                <td>{{compra.idPedido}}</td>
+                <td>{{compra.idUsuario}}</td>
+                <td>{{compra.fechaPedido}}</td>
+            </tr>
+    </table>
+
+</div>

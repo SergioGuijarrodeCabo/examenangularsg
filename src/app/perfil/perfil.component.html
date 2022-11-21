@@ -1,0 +1,14 @@
+<div>
+
+    <div *ngIf="usuario" class="card" > 
+        <p>Nombre: {{usuario.nombre}}</p>
+        <p>Email: {{usuario.email}}</p>
+        <p>Contraseña: {{usuario.pass}}</p>
+
+    </div>
+
+    <div *ngIf="!usuario"> 
+        <p>Usuario no logueado</p>
+  
+    </div>
+</div>

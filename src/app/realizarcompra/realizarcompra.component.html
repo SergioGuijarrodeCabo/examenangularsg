@@ -1,12 +1,14 @@
 <div class="container-fluid">
-    <h1 class="text-primary">Cubos por marca</h1>
-    <table *ngIf="marca" class="table table-bordered table-dark">
+    <h1 class="text-primary">Lista de productos</h1>
+    <table *ngIf="cubos" class="table table-bordered table-dark">
         <thead>
             <tr>
                 
                 <th>Nombre</th>
+                <th>Marca</th>
                 <th>Imagen</th>
                 <th>Precio</th>
+                <th>Valoracion</th>
                
 
                 <th></th>
@@ -15,13 +17,14 @@
         <tbody>
             <tr *ngFor="let cubo of cubos">
                 <td>{{cubo.nombre}}</td>
+                <td>{{cubo.marca}}</td>
                 <td class="text-center">
                     <img src="{{cubo.imagen}}" width="100" class="img-thumbnail"/>
                 </td>
                 <td>{{cubo.precio}}€</td>
-             
+                <td>{{cubo.valoracion}}/5 estrellas</td>
                 <td>
-                    <button class="btn btn-danger" >  <a [routerLink]="['/cubosdetalle', cubo.idCubo]" class="btn btn-primary">Ver detalles</a></button>
+                    <button class="btn btn-danger" (click)="comprar(cubo.idCubo)" >COMPRAR</button>
                 </td>
             </tr>
         </tbody>

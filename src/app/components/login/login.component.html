@@ -1,0 +1,24 @@
+<div >
+
+
+    <p style="color: green;" *ngIf="logeo">Usuario logueado</p>
+
+    <form #formLogin="ngForm" (ngSubmit)="login()">
+        <label>Email:</label>
+        <input type="text" 
+        #cajaemail name="cajaemail" 
+        class="form-control"/>
+        <label>Contraseña:</label>
+        <input type="text" 
+        #cajapassword name="cajapassword" 
+        class="form-control"/>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+
+    <br> <br> <br>
+      <a [routerLink]="['/registro']" class="btn btn-primary">REGISTRO</a>
+
+
+
+   
+</div>
